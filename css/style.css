@@ -17,7 +17,7 @@ body {
   font-size: 15px;
   line-height: 1.8;
   color: rgba(0, 0, 0, 0.7); }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 992px) {
     body {
       font-size: 16px; } }
 
@@ -84,7 +84,7 @@ figure {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s; }
-  @media screen and (max-width: 600) {
+  @media screen and (max-width: 768px) {
     #colorlib-aside {
       width: 300px;
       -moz-transform: translateX(-300px);
@@ -281,7 +281,7 @@ figure {
       opacity: 0;
       min-height: 500px;
       z-index: 9;
-width: 100%;}
+}
       #colorlib-hero .flexslider .slider-text > .slider-text-inner {
         display: table-cell;
         vertical-align: middle;
@@ -406,7 +406,7 @@ body.offcanvas {
 
 .colorlib-heading {
   font-size: 18px;
-  margin-bottom: 4em;
+  margin-bottom: 2em;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 5px;
@@ -911,12 +911,12 @@ body.offcanvas {
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #000; }
-  .blog-entry:hover .blog-img img {
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    transform: scale(1.1); }
+ /* .blog-entry:hover*/ .blog-img:hover img {
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    -o-transform: scale(1.02);
+    transform: scale(1.02); }
 
 .work-menu span {
   margin-left: 10px; }

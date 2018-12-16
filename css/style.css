@@ -1454,3 +1454,10 @@ body.offcanvas {
 .fab1{
     color: blueviolet;
 }
+
+.smaller{
+    font-size: 7px;}
+
+.award-img{
+    text-align: center;
+}

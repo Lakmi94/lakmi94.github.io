@@ -20,7 +20,7 @@ body {
   @media screen and (max-width: 992px) {
     body {
       font-size: 16px; } }
-div * {background-color: aqua}
+
 a {
   color: blueviolet;
   -webkit-transition: 0.5s;

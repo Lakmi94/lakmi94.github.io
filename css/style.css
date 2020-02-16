@@ -559,14 +559,20 @@ body.offcanvas {
   float: left; }
   .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon i {
     color: #fff; }
+ .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-1 {
+    background: #c396ec; }
   .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-2 {
-    background: #7023b8; }
+    background: #9d53e0; }
   .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-3 {
-    background: #571b8f; }
+    background: #8026d3; }
   .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-4 {
-    background: #3e1366; }
+    background: #6c20b1; }
   .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-5 {
-    background: #250b3d; }
+    background: #4d177f; }
+ .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-6 {
+    background: #2f0e4e; }
+ .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-7 {
+    background: #1b082c; }
   .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-none {
     background: #fff;
     width: 20px;

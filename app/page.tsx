@@ -20,6 +20,94 @@ const imageDescriptions: Record<string, string> = {
   "images/udemycertificate.jpg": "Udemy full-stack web development certificate",
 };
 
+const skillGroups = [
+  {
+    title: "UX, Design & Research",
+    skills: [
+      "Figma",
+      "Balsamiq",
+      "Prototyping",
+      "Usability testing",
+      "SUS",
+      "UEQ",
+      "HCI design methods",
+      "Accessible computing",
+    ],
+  },
+  {
+    title: "Frontend Development",
+    skills: [
+      "React",
+      "Next.js",
+      "Vue.js",
+      "Angular",
+      "TypeScript",
+      "JavaScript (ES6)",
+      "HTML",
+      "CSS",
+    ],
+  },
+  {
+    title: "Libraries, Tools & Platforms",
+    skills: [
+      "Chakra UI",
+      "Tailwind CSS",
+      "Bootstrap",
+      "Sass",
+      "Redux",
+      "GraphQL",
+      "Git/GitHub",
+      "Vercel",
+      "ESLint",
+      "Samsung Blockchain SDK",
+    ],
+  },
+  {
+    title: "Programming, Databases & Systems",
+    skills: [
+      "Java",
+      "Python",
+      "Android",
+      "MongoDB",
+      "MySQL",
+      "Windows",
+      "Linux",
+      "EVS broadcast software",
+    ],
+  },
+  {
+    title: "Languages",
+    skills: ["Sinhala · Native", "English · Fluent", "Korean · Beginner"],
+  },
+];
+
+function SkillsSection() {
+  return (
+    <section id="skills" className="colorlib-skills" data-section="skills">
+      <div className="colorlib-narrow-content">
+        <div className="row">
+          <div className="col-md-6 col-md-offset-3 col-md-pull-3">
+            <span className="heading-meta">Specialty</span>
+            <h2 className="colorlib-heading">My Skills</h2>
+          </div>
+        </div>
+        <div className="resume-skill-groups">
+          {skillGroups.map((group) => (
+            <section className="resume-skill-group" key={group.title} aria-label={group.title}>
+              <h3>{group.title}</h3>
+              <ul>
+                {group.skills.map((skill) => (
+                  <li key={skill}>{skill}</li>
+                ))}
+              </ul>
+            </section>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 const mastersEducationEntry = `<div class="panel panel-default">
   <div class="panel-heading" role="tab" id="headingMasters">
     <h4 class="panel-title">
@@ -188,6 +276,10 @@ export default function Home() {
 
           const { attribs } = domNode;
           const text = getTextContent(domNode);
+
+          if (domNode.name === "section" && attribs["data-section"] === "skills") {
+            return createElement(SkillsSection);
+          }
 
           if (domNode.name === "section" && attribs["data-section"] && !attribs.id) {
             attribs.id = attribs["data-section"];

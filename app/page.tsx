@@ -51,6 +51,68 @@ const mastersEducationEntry = `<div class="panel panel-default">
   </div>
 </div>`;
 
+const resumeProjects = `<div class="col-md-4 col-sm-6">
+  <div class="blog-entry resume-project-card">
+    <div class="resume-project-cover" aria-hidden="true"><span>Mobile · Web3</span></div>
+    <div class="desc">
+      <span><small>Mobile · Decentralized App</small></span>
+      <h3>Tokamak Staking Mobile App</h3>
+      <p>A mobile crypto-staking app built with Vue Native, React Native, Samsung Blockchain SDK, and Android Studio, and published on the Samsung Galaxy Store.</p>
+      <p class="resume-project-links"><a href="https://github.com/tokamak-network/tokamak-staking-app" target="_blank">GitHub repository</a></p>
+    </div>
+  </div>
+</div>
+<div class="col-md-4 col-sm-6">
+  <div class="blog-entry resume-project-card">
+    <div class="resume-project-cover" aria-hidden="true"><span>Web3 · Launchpad</span></div>
+    <div class="desc">
+      <span><small>Web3 · Decentralized Launchpad</small></span>
+      <h3>TONStarter</h3>
+      <p>An Ethereum-based decentralized launchpad built with React, Chakra UI, Ethers, Web3.js, and GraphQL. Contributed to frontend development with the Tokamak frontend unit.</p>
+      <p class="resume-project-links">
+        <a href="https://github.com/tokamak-network/tonstarter-frontend/tree/main" target="_blank">GitHub repository</a>
+        <a href="https://medium.com/tokamak-network/what-is-tonstarter-en-kr-556b808d9734" target="_blank">Project article</a>
+      </p>
+    </div>
+  </div>
+</div>
+<div class="col-md-4 col-sm-6">
+  <div class="blog-entry resume-project-card">
+    <div class="resume-project-cover" aria-hidden="true"><span>Web3 · Exchange</span></div>
+    <div class="desc">
+      <span><small>Web3 · Token Exchange</small></span>
+      <h3>Tokamak Swap V2</h3>
+      <p>A decentralized token-swap app inspired by Uniswap, built with Next.js, Ethers, and Uniswap contracts and SDK.</p>
+      <p class="resume-project-links">
+        <a href="https://github.com/tokamak-network/tokamakswapv2" target="_blank">GitHub repository</a>
+        <a href="https://medium.com/tokamak-network/tokamak-network-swap-guide-en-kr-93d6defcb04a" target="_blank">Project article</a>
+      </p>
+    </div>
+  </div>
+</div>
+<div class="col-md-4 col-sm-6">
+  <div class="blog-entry resume-project-card">
+    <div class="resume-project-cover" aria-hidden="true"><span>HCI · Cultural Archive</span></div>
+    <div class="desc">
+      <span><small>HCI · Museum Itinerary</small></span>
+      <h3>Arqivea</h3>
+      <p>A museum itinerary and cultural archive built end-to-end as an HCI group project, from user research and prototyping to a working product, with interviews, observations, usability tests, and SUS/UEQ evaluations.</p>
+      <p class="resume-project-links"><a href="https://www.figma.com/proto/RYuvXqwJvJsECIPqSH1RAx/Arqivea?node-id=51-636&viewport=384%2C189%2C0.5&t=ebIQkeKPi4bX3llA-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=51%3A636&page-id=1%3A2" target="_blank">View prototype</a></p>
+    </div>
+  </div>
+</div>
+<div class="col-md-4 col-sm-6">
+  <div class="blog-entry resume-project-card">
+    <div class="resume-project-cover" aria-hidden="true"><span>UX · Accessible Transit</span></div>
+    <div class="desc">
+      <span><small>UX · Transit Prototype</small></span>
+      <h3>EasyGo</h3>
+      <p>A high-fidelity accessible transit prototype designed in Figma. Evaluated with user testing, SUS, and UEQ questionnaires to refine smart routing and interface layout.</p>
+      <p class="resume-project-links"><a href="https://www.figma.com/proto/dTjYxDKS4g9jHKOfDDcbtI/EasyGo-High-Fidelity-Prototype--Community-?node-id=170-1137&p=f&t=Ve51zzahJdm5zFw6-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=130%3A231&show-proto-sideb" target="_blank">View prototype</a></p>
+    </div>
+  </div>
+</div>`;
+
 function getTextContent(element: Element): string {
   return element.children
     .map((child) =>
@@ -73,10 +135,15 @@ function isWithin(element: Element, className: string): boolean {
 
 export default function Home() {
   const educationAccordion = '<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">';
-  const markup = portfolioMarkup.replace(educationAccordion, `${educationAccordion}${mastersEducationEntry}`);
+  const projectGrid = '<div class="row" style="padding: 0">';
+  const withEducation = portfolioMarkup.replace(
+    educationAccordion,
+    `${educationAccordion}${mastersEducationEntry}`,
+  );
+  const markup = withEducation.replace(projectGrid, `${projectGrid}${resumeProjects}`);
 
-  if (markup === portfolioMarkup) {
-    throw new Error("Could not find the Education accordion in the portfolio markup.");
+  if (withEducation === portfolioMarkup || markup === withEducation) {
+    throw new Error("Could not find the Education accordion or Projects grid in the portfolio markup.");
   }
 
   return (

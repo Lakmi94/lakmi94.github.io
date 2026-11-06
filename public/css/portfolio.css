@@ -113,8 +113,8 @@ button {
 }
 
 #colorlib-aside .author-img {
-  width: 124px;
-  height: 124px;
+  width: 180px;
+  height: 180px;
   margin: 0 0 1.4rem;
   border: 4px solid var(--accent-soft);
   border-radius: 50%;
@@ -643,6 +643,8 @@ button {
 }
 
 .blog-entry {
+  display: flex;
+  flex-direction: column;
   height: 100%;
   overflow: hidden;
   border: 1px solid var(--line);
@@ -699,6 +701,68 @@ button {
   line-height: 1.7;
 }
 
+.resume-project-cover {
+  display: flex;
+  min-height: 180px;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(ellipse at 75% 25%, rgb(183 148 225 / 55%), transparent 48%),
+    linear-gradient(135deg, #f8f4fc, #e8dcf5);
+}
+
+.resume-project-cover span {
+  padding: 0.45rem 0.8rem;
+  border: 1px solid rgb(106 25 190 / 24%);
+  border-radius: 999px;
+  background: rgb(255 255 255 / 85%);
+  color: var(--accent-strong);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.resume-project-card .desc h3 {
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.resume-project-card .desc .resume-project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin-top: 0.85rem;
+}
+
+.resume-project-links a {
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+#colorlib-main section[data-section="projects"] .row[style*="padding"] {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin: 0;
+}
+
+#colorlib-main section[data-section="projects"] .row[style*="padding"]::before,
+#colorlib-main section[data-section="projects"] .row[style*="padding"]::after {
+  display: none;
+  content: none;
+}
+
+#colorlib-main section[data-section="projects"] .row[style*="padding"] > [class*="col-"] {
+  float: none;
+  width: auto;
+  min-width: 0;
+  padding: 0;
+}
+
+#colorlib-main section[data-section="projects"] .blog-entry .desc {
+  flex: 1;
+}
+
 .colorlib-contact .colorlib-feature {
   display: flex;
   min-height: 72px;
@@ -712,6 +776,9 @@ button {
 }
 
 .colorlib-contact .colorlib-icon {
+  position: relative;
+  top: auto;
+  left: auto;
   display: flex;
   width: 44px;
   height: 44px;
@@ -721,6 +788,22 @@ button {
   border-radius: 50%;
   background: var(--accent-soft);
   color: var(--accent-strong);
+}
+
+.colorlib-contact .colorlib-icon i {
+  display: block;
+  width: auto;
+  height: auto;
+  font-size: 20px !important;
+  line-height: 1;
+}
+
+.colorlib-contact .colorlib-text {
+  width: auto;
+  flex: 1;
+  margin-top: 0 !important;
+  padding-left: 0;
+  text-align: left;
 }
 
 .colorlib-contact .colorlib-text p {
@@ -812,16 +895,9 @@ button {
     padding: 2.25rem 0;
   }
 
-  .colorlib-blog .row[style*="padding"] {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  #colorlib-main section[data-section="projects"] .row[style*="padding"] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
-    margin: 0;
-  }
-
-  .colorlib-blog .row[style*="padding"] > [class*="col-"] {
-    width: 100%;
-    padding: 0;
   }
 }
 
@@ -833,6 +909,10 @@ button {
   #colorlib-main {
     padding-right: 1rem;
     padding-left: 1rem;
+  }
+
+  #colorlib-main section[data-section="projects"] .row[style*="padding"] {
+    grid-template-columns: minmax(0, 1fr);
   }
 
   #colorlib-hero {

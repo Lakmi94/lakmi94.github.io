@@ -123,7 +123,7 @@ button {
 #colorlib-aside #colorlib-logo {
   margin: 0 0 0.45rem;
   color: var(--ink);
-  font-family: "Quicksand", "Segoe UI", sans-serif;
+  font-family: "Outfit", system-ui, -apple-system, sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.25;
@@ -298,7 +298,7 @@ button {
 #colorlib-hero .desc h1 {
   margin-bottom: 1rem;
   color: var(--ink);
-  font-family: "Quicksand", "Segoe UI", sans-serif;
+  font-family: "Outfit", system-ui, -apple-system, sans-serif;
   font-size: clamp(2.5rem, 5vw, 4.5rem);
   line-height: 1.12;
   letter-spacing: -0.035em;
@@ -353,7 +353,11 @@ button {
 
 #colorlib-hero .btn-primary,
 #colorlib-hero .btn-learn {
+  box-sizing: border-box;
   display: inline-flex;
+  width: max-content;
+  flex: 0 0 auto;
+  white-space: nowrap;
   min-height: 48px;
   align-items: center;
   gap: 0.6rem;
@@ -370,10 +374,19 @@ button {
 }
 
 #colorlib-hero .btn-primary:hover,
+#colorlib-hero .btn-primary:focus,
+#colorlib-hero .btn-learn:hover,
+#colorlib-hero .btn-learn:focus {
+  text-decoration: none !important;
+}
+
+#colorlib-hero .btn-primary:hover,
 #colorlib-hero .btn-learn:hover {
   border-color: var(--accent-strong);
   background: var(--accent-strong);
   color: #fff;
+  box-shadow: 0 6px 16px rgb(34 24 48 / 12%);
+  transform: translateY(-2px);
 }
 
 #colorlib-hero .socialWrap {
@@ -393,10 +406,30 @@ button {
   border-radius: 50%;
   background: #fff;
   color: var(--accent);
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease,
+    box-shadow 160ms ease;
 }
 
 #colorlib-hero .socialWrap a:hover {
+  border-color: var(--accent);
   background: var(--accent-soft);
+  color: var(--accent-strong);
+  box-shadow: 0 6px 16px rgb(34 24 48 / 10%);
+  transform: translateY(-2px);
+  text-decoration: none !important;
+}
+
+#colorlib-hero .socialWrap a:hover i {
+  color: var(--accent-strong) !important;
+}
+
+#colorlib-hero .socialWrap a:active {
+  background: #e3d2fb;
+  transform: translateY(0);
 }
 
 #colorlib-main > section:not(#colorlib-hero) {
@@ -433,12 +466,21 @@ button {
 .colorlib-heading {
   margin: 0;
   color: var(--ink);
-  font-family: "Quicksand", "Segoe UI", sans-serif;
+  font-family: "Outfit", system-ui, -apple-system, sans-serif;
   font-size: clamp(1.8rem, 3vw, 2.45rem);
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.25;
   text-transform: none;
+}
+
+#colorlib-main h1,
+#colorlib-main h2,
+#colorlib-main h3,
+#colorlib-main h4,
+#colorlib-main h5,
+#colorlib-main h6 {
+  font-family: "Outfit", system-ui, -apple-system, sans-serif;
 }
 
 .timeline-centered {
@@ -454,36 +496,52 @@ button {
   box-shadow: 0 0 0 5px var(--canvas);
 }
 
-#experience .timeline-entry-inner .timeline-icon.color-0 {
-  background: #8a2be2;
+#colorlib-main section[data-section="experience"] .timeline-entry-inner .timeline-icon.color-0 {
+  background: #290c43;
 }
 
-#experience .timeline-entry-inner .timeline-icon.color-1 {
-  background: #7c26cb;
-}
-
-#experience .timeline-entry-inner .timeline-icon.color-2 {
-  background: #6e22b4;
-}
-
-#experience .timeline-entry-inner .timeline-icon.color-3 {
-  background: #601e9e;
-}
-
-#experience .timeline-entry-inner .timeline-icon.color-4 {
-  background: #521987;
-}
-
-#experience .timeline-entry-inner .timeline-icon.color-5 {
-  background: #451571;
-}
-
-#experience .timeline-entry-inner .timeline-icon.color-6 {
+#colorlib-main section[data-section="experience"] .timeline-entry-inner .timeline-icon.color-1 {
   background: #37115a;
 }
 
-#experience .timeline-entry-inner .timeline-icon.color-7 {
+#colorlib-main section[data-section="experience"] .timeline-entry-inner .timeline-icon.color-2 {
+  background: #451571;
+}
+
+#colorlib-main section[data-section="experience"] .timeline-entry-inner .timeline-icon.color-3 {
+  background: #521987;
+}
+
+#colorlib-main section[data-section="experience"] .timeline-entry-inner .timeline-icon.color-4 {
+  background: #601e9e;
+}
+
+#colorlib-main section[data-section="experience"] .timeline-entry-inner .timeline-icon.color-5 {
+  background: #6e22b4;
+}
+
+#colorlib-main section[data-section="experience"] .timeline-entry-inner .timeline-icon.color-6 {
+  background: #7c26cb;
+}
+
+#colorlib-main section[data-section="experience"] .timeline-entry-inner .timeline-icon.color-7 {
+  background: #8a2be2;
+}
+
+#colorlib-main section[data-section="awards"] .timeline-entry-inner .timeline-icon.color-1 {
   background: #290c43;
+}
+
+#colorlib-main section[data-section="awards"] .timeline-entry-inner .timeline-icon.color-2 {
+  background: #451571;
+}
+
+#colorlib-main section[data-section="awards"] .timeline-entry-inner .timeline-icon.color-3 {
+  background: #601e9e;
+}
+
+#colorlib-main section[data-section="awards"] .timeline-entry-inner .timeline-icon.color-4 {
+  background: #7c26cb;
 }
 
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label {
@@ -619,7 +677,7 @@ button {
   width: 100%;
   margin: 0 0 0.25rem;
   color: var(--accent-strong) !important;
-  font-family: "Quicksand", "Segoe UI", sans-serif;
+  font-family: "Outfit", system-ui, -apple-system, sans-serif;
   font-size: 1rem;
   font-weight: 700 !important;
   line-height: 1.4;
@@ -686,7 +744,7 @@ button {
 
 .blog-entry .desc h3 {
   margin: 0.65rem 0;
-  font-family: "Quicksand", "Segoe UI", sans-serif;
+  font-family: "Outfit", system-ui, -apple-system, sans-serif;
   font-size: 1.35rem;
   font-weight: 700;
 }
@@ -815,11 +873,50 @@ button {
   color: var(--accent-strong);
 }
 
+.about-card {
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid var(--line);
+  border-radius: 0.9rem;
+  background: var(--surface);
+  box-shadow: 0 8px 24px rgb(34 24 48 / 4%);
+}
+
+.about-card p {
+  margin: 0 0 1.25rem;
+  color: #39445b;
+}
+
+.about-interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about-interests li {
+  padding: 0.35rem 0.8rem;
+  border: 1px solid #e8def2;
+  border-radius: 999px;
+  background: #f8f4fc;
+  color: #45206a;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
 .colorlib-nav-toggle {
   display: none;
 }
 
 #colorlib-hero .flexslider .slider-text > .slider-text-inner .btn.btn-learn {
+  box-sizing: border-box;
+  width: 190px !important;
+  min-width: 190px;
+  max-width: 190px;
+  flex: 0 0 190px;
+  justify-content: center;
+  white-space: nowrap;
   min-height: 48px;
   padding: 0.7rem 1.15rem;
   border: 2px solid var(--accent) !important;
@@ -837,6 +934,9 @@ button {
   border-color: var(--accent-strong) !important;
   background: var(--accent-strong) !important;
   color: #fff !important;
+  box-shadow: 0 6px 16px rgb(34 24 48 / 12%);
+  transform: translateY(-2px);
+  text-decoration: none !important;
 }
 
 @media (max-width: 900px) {

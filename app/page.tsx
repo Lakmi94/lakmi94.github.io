@@ -113,6 +113,27 @@ const resumeProjects = `<div class="col-md-4 col-sm-6">
   </div>
 </div>`;
 
+const aboutSection = `<section class="colorlib-about" data-section="about">
+  <div class="colorlib-narrow-content">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 col-md-pull-3">
+        <span class="heading-meta">A little about me</span>
+        <h2 class="colorlib-heading">Beyond work and studies</h2>
+      </div>
+    </div>
+    <div class="about-card">
+      <p>When I’m not working or studying, I’m usually planning my next trip, watching a good show, or trying a new recipe. I love cooking, baking (with varying levels of success), and getting lost in a good book.</p>
+      <ul class="about-interests" aria-label="My interests">
+        <li>Travel</li>
+        <li>TV</li>
+        <li>Cooking</li>
+        <li>Baking</li>
+        <li>Reading</li>
+      </ul>
+    </div>
+  </div>
+</section>`;
+
 function getTextContent(element: Element): string {
   return element.children
     .map((child) =>
@@ -136,14 +157,24 @@ function isWithin(element: Element, className: string): boolean {
 export default function Home() {
   const educationAccordion = '<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">';
   const projectGrid = '<div class="row" style="padding: 0">';
+  const aboutNavItem = '<li><a href="#" data-nav-section="about">About Me</a></li>';
+  const contactNavItem = '<li><a href="#" data-nav-section="contact">Contact</a></li>';
+  const aboutSectionAnchor = '<section class="colorlib-contact" data-section="contact">';
   const withEducation = portfolioMarkup.replace(
     educationAccordion,
     `${educationAccordion}${mastersEducationEntry}`,
   );
-  const markup = withEducation.replace(projectGrid, `${projectGrid}${resumeProjects}`);
+  const withProjects = withEducation.replace(projectGrid, `${projectGrid}${resumeProjects}`);
+  const withAboutNav = withProjects.replace(contactNavItem, `${aboutNavItem}${contactNavItem}`);
+  const markup = withAboutNav.replace(aboutSectionAnchor, `${aboutSection}${aboutSectionAnchor}`);
 
-  if (withEducation === portfolioMarkup || markup === withEducation) {
-    throw new Error("Could not find the Education accordion or Projects grid in the portfolio markup.");
+  if (
+    withEducation === portfolioMarkup ||
+    withProjects === withEducation ||
+    withAboutNav === withProjects ||
+    markup === withAboutNav
+  ) {
+    throw new Error("Could not find an expected Education, Projects, or Contact markup insertion point.");
   }
 
   return (
@@ -157,6 +188,10 @@ export default function Home() {
 
           const { attribs } = domNode;
           const text = getTextContent(domNode);
+
+          if (domNode.name === "section" && attribs["data-section"] && !attribs.id) {
+            attribs.id = attribs["data-section"];
+          }
 
           if (domNode.name === "div" && attribs.id === "colorlib-main") {
             domNode.name = "main";

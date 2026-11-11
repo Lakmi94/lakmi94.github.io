@@ -678,7 +678,7 @@ button {
 
 .resume-skill-group h3 {
   margin: 0 0 0.9rem;
-  color: var(--accent-strong);
+  color: var(--muted);
   font-size: 1.05rem;
   font-weight: 700;
 }

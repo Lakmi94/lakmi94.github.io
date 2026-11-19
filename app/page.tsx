@@ -647,10 +647,10 @@ export default function Home() {
             );
           }
 
-          if (domNode.name === "span" && text === "(010)-4013-2156") {
+          if (domNode.name === "span" && text === "+46764433227") {
             return createElement(
               "a",
-              { href: "tel:+821040132156", className: attribs.class },
+              { href: "tel:+46764433227", className: attribs.class },
               text,
             );
           }
@@ -670,8 +670,8 @@ export default function Home() {
             );
           }
 
-          if (domNode.name === "p" && text === "+8210-4013-2156") {
-            return createElement("p", null, createElement("a", { href: "tel:+821040132156" }, text));
+          if (domNode.name === "p" && text === "+46764433227") {
+            return createElement("p", null, createElement("a", { href: "tel:+46764433227" }, text));
           }
         },
       })}

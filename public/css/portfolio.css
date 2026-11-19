@@ -1088,7 +1088,7 @@ button {
   z-index: 1;
   display: flex;
   width: 100%;
-  aspect-ratio: 1.65;
+  aspect-ratio: 1;
   align-items: center;
   justify-content: center;
   border: 5px solid #fff;
@@ -1097,7 +1097,7 @@ button {
 }
 
 .about-gallery-image {
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .about-gallery-placeholder {

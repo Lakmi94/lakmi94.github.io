@@ -36,7 +36,15 @@ const interests: AboutInterest[] = [
     id: "cooking",
     title: "Cooking & baking",
     description: "I experiment with new recipes and enjoy time in the kitchen.",
-    photos: [null, null, null],
+    photos: [
+      "/images/about/cooking-cake-crown.jpg",
+      "/images/about/cooking-fruit-cake.jpg",
+      "/images/about/cooking-green-cookies.jpg",
+      "/images/about/cooking-lime-pie.jpg",
+      "/images/about/cooking-floral-cake.jpg",
+      "/images/about/cooking-pancakes.jpg",
+      "/images/about/cooking-cupcakes.jpg",
+    ],
   },
 ];
 

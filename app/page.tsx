@@ -14,9 +14,14 @@ const imageDescriptions: Record<string, string> = {
   "images/logo (1).png": "EVS XTAccess",
   "images/ipdirector.PNG": "EVS IPDirector",
   "images/ingestfunnel.PNG": "EVS Ingest Funnel",
-  "images/Destino.png": "Destino travel application",
-  "images/magickittens.jpg": "Magic Kittens game",
-  "images/Acta.jpg": "Acta travel journal app",
+  "/images/mobileStaking.png": "Tokamak Staking mobile app screens",
+  "/images/TonStarter.png": "TONStarter branding",
+  "/images/TokamakSwap.png": "Tokamak Swap interface",
+  "/images/Arqivea.png": "Arqivea museum discovery interface",
+  "/images/EasyGo.png": "EasyGo accessible transit app",
+  "/images/Destino.png": "Destino travel application",
+  "/images/magickittens.jpg": "Magic Kittens game",
+  "/images/Acta.jpg": "Acta travel journal app",
   "images/btp.PNG": "Olympic Broadcasting Services Broadcast Training Programme certificate",
   "images/udemycertificate.jpg": "Udemy full-stack web development certificate",
 };
@@ -66,16 +71,13 @@ const skillGroups = [
   {
     title: "Programming, Databases & Systems",
     skills: [
-      "Java",
-      "Python",
-      "Android",
-      "MongoDB",
-      "MySQL",
+      "Ethers",
+      "Web3.js",
+      "Android Studio",
       "Windows",
-      "Linux",
       "macOS",
       "EVS broadcast software",
-    ],
+    ]
   },
   {
     title: "Languages",
@@ -110,6 +112,7 @@ const skillIcons: Record<string, string> = {
   Ethers: "fas fa-code",
   "Web3.js": "fas fa-cubes",
   "Uniswap SDK": "fas fa-exchange-alt",
+  "Jakarta Server Pages": "fas fa-code",
   "Android Studio": "devicon-android-plain",
   Java: "devicon-java-plain",
   Python: "devicon-python-plain",
@@ -175,7 +178,9 @@ const projectSkills: Record<string, string[]> = {
   "Tokamak Swap V2": ["Next.js", "Ethers", "Uniswap SDK"],
   Arqivea: ["Figma", "User research", "Prototyping", "Usability testing", "SUS", "UEQ"],
   EasyGo: ["Figma", "User testing", "Accessible design", "Usability testing", "SUS", "UEQ"],
+  Acta: ["Java", "HTML", "Android Studio"],
   "Magic Kittens": ["JavaScript"],
+  Destino: ["Java", "HTML", "CSS", "Jakarta Server Pages"],
 };
 
 const figmaLogoPaths = [
@@ -240,6 +245,235 @@ function SkillsSection() {
   );
 }
 
+const resumeExperience = [
+  {
+    role: "Librarian (Media Manager)",
+    company: "Olympic Broadcasting Services",
+    type: "Freelance",
+    period: "June – September 2024",
+    games: "Paris 2024 Olympic & Paralympic Games",
+    additionalGames: "Gangwon 2024 Youth Olympic Winter Games · January – February 2024",
+    companyUrl: "https://www.obs.tv",
+    description:
+      "At the Paris 2024 and Gangwon 2024 Games, I developed comprehensive Video Logging Manuals covering more than 40 sports. I worked closely with the Metadata QC team, giving accurate and timely answers to questions about sport video logging. I led quality control of the footage, logs and metadata produced during the Games, which helped optimize logging structures and keep classification precise. I also prepared the Opening and Closing Ceremonies, creating their logging manuals and participant, automatic and manual keyword sets, and formatting the speeches.",
+  },
+  {
+    role: "Frontend Developer",
+    company: "Tokamak Network (Onther Inc.)",
+    type: "Full-time",
+    period: "April 2020 – December 2023",
+    companyUrl: "https://www.tokamak.network/",
+    description:
+      "At Tokamak Network, I built Ethereum-based decentralized applications using React, Next.js, Vue, TypeScript, Web3.js and Ethers, along with UI libraries such as Chakra UI. I launched mobile DApps on the Samsung Galaxy App Store using the Samsung Blockchain SDKs, Vue and React Native. From February 2021, I led the frontend development unit. In that role I mentored and trained new developers, conducted code reviews, made architectural decisions, and improved team workflows through weekly leadership meetings. I also helped build the engineering team by screening candidates and conducting interviews.",
+  },
+  {
+    role: "Librarian (Media Manager)",
+    company: "Olympic Broadcasting Services",
+    type: "Freelance",
+    period: "January – March 2022",
+    games: "Beijing 2022 Olympic and Paralympic Winter Games",
+    additionalGames: "Tokyo 2020 Olympic and Paralympic Games · June – September 2021",
+    companyUrl: "https://www.obs.tv",
+    description:
+      "For the Tokyo 2020 and Beijing 2022 Games, I reviewed and refined the Video Logging Manuals to keep them consistent and easy to use, and I wrote the Paralympic Sport Video Logging Manuals from scratch. I supported Metadata QC operations by answering sport video logging questions accurately and promptly, and I performed quality control on the footage, logs and metadata generated during the Games.",
+  },
+  {
+    role: "Ingest Operator",
+    company: "Olympic Broadcasting Services",
+    type: "Freelance",
+    period: "January 2020",
+    games: "Lausanne 2020 Youth Olympic Winter Games",
+    additionalGames: "Buenos Aires 2018 Youth Olympic Games · September – October 2018",
+    companyUrl: "https://www.obs.tv",
+    description:
+      "As an Ingest Operator, I managed the ingestion of footage from venue locations to the OBS headquarters using EVS Ingest Funnel software. I wrote Ingest Funnel workflow guides and operational reports that improved media processing efficiency. I also logged and classified video footage so that it could be archived smoothly.",
+  },
+  {
+    role: "Frontend Developer Intern",
+    company: "Prendssoin Korea",
+    period: "July 2019 – October 2019",
+    description:
+      "During my internship at Prendssoin Korea, I developed an internal management tool for the company using React, React Hooks, Redux, TypeScript, Sass and libraries such as Moment.js. The software records employees’ working hours, manages schedules and checklists, produces reports on company events, and securely stores and displays company-provided passwords.",
+  },
+  {
+    role: "Advanced Research and Development Intern",
+    company: "Genesem Inc.",
+    period: "July 2018 – September 2018",
+    companyUrl: "https://www.genesem.com/eng/",
+    description:
+      "At Genesem, I analyzed the MMI and machine control code for semiconductor back-end processing equipment. I also wrote installation, safety and UI manuals that helped users adopt the equipment more easily.",
+  },
+  {
+    role: "Archive Assistant",
+    company: "Olympic Broadcasting Services",
+    type: "Freelance",
+    period: "January 2018 – March 2018",
+    games: "PyeongChang 2018 Winter Olympic Games",
+    companyUrl: "https://www.obs.tv",
+    description:
+      "At the PyeongChang 2018 Winter Olympic Games, I managed the footage and metadata generated during the Games and carried out quality control on them.",
+  },
+  {
+    role: "Teaching Assistant",
+    company: "State University of New York, Korea",
+    period: "August 2016 – June 2018",
+    companyUrl: "https://sunykorea.ac.kr/",
+    description:
+      "As a Teaching Assistant, I tutored and supported students in the theoretical computer science courses Discrete Mathematics and Theory of Computation.",
+  },
+];
+
+function ExperienceSection() {
+  return (
+    <section id="experience" className="colorlib-experience" data-section="experience">
+      <div className="colorlib-narrow-content">
+        <div className="row">
+          <div className="col-md-6 col-md-offset-3 col-md-pull-3">
+            <span className="heading-meta">Experience</span>
+            <h2 className="colorlib-heading">Work Experience</h2>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-12">
+            <div className="timeline-centered">
+              {resumeExperience.map((entry, index) => (
+                <article className="timeline-entry" key={`${entry.role}-${entry.company}`}>
+                  <div className="timeline-entry-inner">
+                    <div className={`timeline-icon color-${index % 8}`}>
+                      <i className="icon-pen2" aria-hidden="true" />
+                    </div>
+                    <div className="timeline-label">
+                      <h3>
+                        {entry.role} |{" "}
+                        {entry.companyUrl ? (
+                          <a href={entry.companyUrl} target="_blank" rel="noopener noreferrer">
+                            {entry.company}
+                          </a>
+                        ) : (
+                          entry.company
+                        )}
+                        {entry.type ? ` · ${entry.type}` : ""}
+                        <span>{entry.period}</span>
+                      </h3>
+                      {entry.games ? <p className="experience-events">{entry.games}</p> : null}
+                      {entry.additionalGames ? (
+                        <p className="experience-events">{entry.additionalGames}</p>
+                      ) : null}
+                      <p>{entry.description}</p>
+                    </div>
+                  </div>
+                </article>
+              ))}
+              <article className="timeline-entry begin">
+                <div className="timeline-entry-inner">
+                  <div className="timeline-icon color-none" />
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ContactSection() {
+  return (
+    <section id="contact" className="colorlib-contact" data-section="contact">
+      <div className="colorlib-narrow-content">
+        <div className="row">
+          <div className="col-md-6 col-md-offset-3 col-md-pull-3">
+            <span className="heading-meta">Get in Touch</span>
+            <h2 className="colorlib-heading">Contact</h2>
+          </div>
+        </div>
+        <div className="row contact-layout">
+          <div className="col-md-6">
+            <div className="colorlib-feature colorlib-feature-sm">
+              <div className="colorlib-icon">
+                <i className="fas fa-at" aria-hidden="true" />
+              </div>
+              <div className="colorlib-text">
+                <p>
+                  <a href="mailto:lakmi94@gmail.com">lakmi94@gmail.com</a>
+                  {" | "}
+                  <a href="mailto:lakmi94@outlook.com">lakmi94@outlook.com</a>
+                </p>
+              </div>
+            </div>
+            <div className="colorlib-feature colorlib-feature-sm">
+              <div className="colorlib-icon">
+                <i className="fab fa-linkedin-in" aria-hidden="true" />
+              </div>
+              <div className="colorlib-text">
+                <p>
+                  <a href="https://www.linkedin.com/in/lakmi-kulathunga/" target="_blank" rel="noopener noreferrer">
+                    LinkedIn
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div className="colorlib-feature colorlib-feature-sm">
+              <div className="colorlib-icon">
+                <i className="fas fa-map-marked-alt" aria-hidden="true" />
+              </div>
+              <div className="colorlib-text">
+                <p>Stockholm, Sweden</p>
+              </div>
+            </div>
+            <div className="colorlib-feature colorlib-feature-sm">
+              <div className="colorlib-icon">
+                <i className="fas fa-phone" aria-hidden="true" />
+              </div>
+              <div className="colorlib-text">
+                <p>
+                  <a href="tel:+46764433227">+46764433227</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-6">
+            <form
+              className="contact-form"
+              action="https://formsubmit.co/lakmi94@gmail.com"
+              method="POST"
+            >
+              <input type="hidden" name="_subject" value="New message from portfolio" />
+              <div className="contact-form-field">
+                <label htmlFor="contact-name">Name</label>
+                <input
+                  id="contact-name"
+                  name="name"
+                  type="text"
+                  autoComplete="name"
+                  required
+                />
+              </div>
+              <div className="contact-form-field">
+                <label htmlFor="contact-email">Email</label>
+                <input
+                  id="contact-email"
+                  name="email"
+                  type="email"
+                  autoComplete="email"
+                  required
+                />
+              </div>
+              <div className="contact-form-field">
+                <label htmlFor="contact-message">Message</label>
+                <textarea id="contact-message" name="message" rows={6} required />
+              </div>
+              <button className="contact-form-submit" type="submit">
+                Send message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 const mastersEducationEntry = `<div class="panel panel-default">
   <div class="panel-heading" role="tab" id="headingMasters">
     <h4 class="panel-title">
@@ -273,7 +507,7 @@ const mastersEducationEntry = `<div class="panel panel-default">
 
 const resumeProjects = `<div class="col-md-4 col-sm-6">
   <div class="blog-entry resume-project-card">
-    <div class="resume-project-cover" aria-hidden="true"><span class="project-logo"><i class="fas fa-mobile-alt"></i></span><span class="project-category">Mobile · Web3</span></div>
+    <div class="resume-project-cover"><img class="resume-project-image" src="/images/mobileStaking.png" alt="Tokamak Staking mobile app screens" /></div>
     <div class="desc">
       <span><small>Mobile · Decentralized App</small></span>
       <h3>Tokamak Staking Mobile App</h3>
@@ -284,7 +518,7 @@ const resumeProjects = `<div class="col-md-4 col-sm-6">
 </div>
 <div class="col-md-4 col-sm-6">
   <div class="blog-entry resume-project-card">
-    <div class="resume-project-cover" aria-hidden="true"><span class="project-logo"><i class="fas fa-rocket"></i></span><span class="project-category">Web3 · Launchpad</span></div>
+    <div class="resume-project-cover"><img class="resume-project-image" src="/images/TonStarter.png" alt="TONStarter branding" /></div>
     <div class="desc">
       <span><small>Web3 · Decentralized Launchpad</small></span>
       <h3>TONStarter</h3>
@@ -298,7 +532,7 @@ const resumeProjects = `<div class="col-md-4 col-sm-6">
 </div>
 <div class="col-md-4 col-sm-6">
   <div class="blog-entry resume-project-card">
-    <div class="resume-project-cover" aria-hidden="true"><span class="project-logo"><i class="fas fa-exchange-alt"></i></span><span class="project-category">Web3 · Exchange</span></div>
+    <div class="resume-project-cover"><img class="resume-project-image" src="/images/TokamakSwap.png" alt="Tokamak Swap interface" /></div>
     <div class="desc">
       <span><small>Web3 · Token Exchange</small></span>
       <h3>Tokamak Swap V2</h3>
@@ -312,18 +546,21 @@ const resumeProjects = `<div class="col-md-4 col-sm-6">
 </div>
 <div class="col-md-4 col-sm-6">
   <div class="blog-entry resume-project-card">
-    <div class="resume-project-cover" aria-hidden="true"><span class="project-logo"><i class="fas fa-landmark"></i></span><span class="project-category">HCI · Cultural Archive</span></div>
+    <div class="resume-project-cover"><img class="resume-project-image" src="/images/Arqivea.png" alt="Arqivea museum discovery interface" /></div>
     <div class="desc">
       <span><small>HCI · Museum Itinerary</small></span>
       <h3>Arqivea</h3>
       <p>A museum itinerary and cultural archive built end-to-end as an HCI group project, from user research and prototyping to a working product, with interviews, observations, usability tests, and SUS/UEQ evaluations.</p>
-      <p class="resume-project-links"><a href="https://www.figma.com/proto/RYuvXqwJvJsECIPqSH1RAx/Arqivea?node-id=51-636&viewport=384%2C189%2C0.5&t=ebIQkeKPi4bX3llA-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=51%3A636&page-id=1%3A2" target="_blank">View prototype</a></p>
+      <p class="resume-project-links">
+        <a href="https://arqivea-team3.vercel.app/" target="_blank">Visit project</a>
+        <a href="https://www.figma.com/proto/RYuvXqwJvJsECIPqSH1RAx/Arqivea?node-id=51-636&viewport=384%2C189%2C0.5&t=ebIQkeKPi4bX3llA-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=51%3A636&page-id=1%3A2" target="_blank">View prototype</a>
+      </p>
     </div>
   </div>
 </div>
 <div class="col-md-4 col-sm-6">
   <div class="blog-entry resume-project-card">
-    <div class="resume-project-cover" aria-hidden="true"><span class="project-logo"><i class="fas fa-route"></i></span><span class="project-category">UX · Accessible Transit</span></div>
+    <div class="resume-project-cover"><img class="resume-project-image resume-project-image--contain" src="/images/EasyGo.png" alt="EasyGo accessible transit app" /></div>
     <div class="desc">
       <span><small>UX · Transit Prototype</small></span>
       <h3>EasyGo</h3>
@@ -331,7 +568,41 @@ const resumeProjects = `<div class="col-md-4 col-sm-6">
       <p class="resume-project-links"><a href="https://www.figma.com/proto/dTjYxDKS4g9jHKOfDDcbtI/EasyGo-High-Fidelity-Prototype--Community-?node-id=170-1137&p=f&t=Ve51zzahJdm5zFw6-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=130%3A231&show-proto-sideb" target="_blank">View prototype</a></p>
     </div>
   </div>
-</div>`;
+</div>
+<div class="col-md-4 col-sm-6">
+  <div class="blog-entry resume-project-card">
+    <div class="resume-project-cover"><img class="resume-project-image" src="/images/Destino.png" alt="Destino travel application" /></div>
+    <div class="desc">
+      <span><small>Software Engineering · Travel App</small></span>
+      <h3>Destino</h3>
+      <p>An interactive travel application that brings together travel blogs, flight and hotel reservations, weather, country information, and currency conversion.</p>
+      <p class="resume-project-links"><a href="https://destino-1.appspot.com" target="_blank">Visit project</a></p>
+    </div>
+  </div>
+</div>
+<div class="col-md-4 col-sm-6">
+  <div class="blog-entry resume-project-card">
+    <div class="resume-project-cover"><img class="resume-project-image" src="/images/magickittens.jpg" alt="Magic Kittens game" /></div>
+    <div class="desc">
+      <span><small>Game Design · Web Game</small></span>
+      <h3>Magic Kittens</h3>
+      <p>A 2D top-down browser game built with JavaScript, featuring sprite-based animation, tilemaps, physics, collision detection, and gravity.</p>
+      <p class="resume-project-links"><a href="https://magic-kittens.firebaseapp.com/" target="_blank">Play game</a></p>
+    </div>
+  </div>
+</div>
+<div class="col-md-4 col-sm-6">
+  <div class="blog-entry resume-project-card">
+    <div class="resume-project-cover"><img class="resume-project-image" src="/images/Acta.jpg" alt="Acta travel journal app" /></div>
+    <div class="desc">
+      <span><small>Inspiration · Mobile App</small></span>
+      <h3>Acta</h3>
+      <p>A mobile travel journal app for recording journeys with text and photos, with additional features designed for travelers.</p>
+      <p class="resume-project-links"><a href="https://github.com/Lakmi94/Acta" target="_blank">GitHub repository</a></p>
+    </div>
+  </div>
+</div>
+`;
 
 const aboutSection = `<section class="colorlib-about" data-section="about">
   <div class="colorlib-narrow-content">
@@ -502,8 +773,16 @@ export default function Home() {
             return createElement(SkillsSection);
           }
 
+          if (domNode.name === "section" && attribs["data-section"] === "experience") {
+            return createElement(ExperienceSection);
+          }
+
           if (domNode.name === "section" && attribs["data-section"] === "about") {
             return createElement(AboutGallery);
+          }
+
+          if (domNode.name === "section" && attribs["data-section"] === "contact") {
+            return createElement(ContactSection);
           }
 
           if (domNode.name === "section" && attribs["data-section"] && !attribs.id) {
@@ -537,6 +816,10 @@ export default function Home() {
 
           if (domNode.name === "h2" && isWithin(domNode, "timeline-label")) {
             domNode.name = "h3";
+          }
+
+          if (domNode.name === "h1" && isWithin(domNode, "desc")) {
+            delete attribs.style;
           }
 
           if (

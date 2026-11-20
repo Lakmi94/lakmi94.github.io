@@ -16,21 +16,22 @@ const interests: AboutInterest[] = [
     title: "Traveling",
     description:
       "A new city or culture is my favorite way to keep learning and to see things through a fresh lens.",
-    photos: [null, null, null],
+    photos: ["/images/about/travel1.png", "/images/about/travel2.png", "/images/about/travel3.png", "/images/about/travel4.png", "/images/about/travel5.jpg", "/images/about/travel6.png", "/images/about/travel7.jpg"
+    ],
   },
   {
     id: "reading",
     title: "Reading",
     description:
       "I enjoy getting lost in a good book and discovering new ideas and stories.",
-    photos: [null, null, null],
+    photos: ['/images/about/book6.jpg','/images/about/book1.jpg', '/images/about/book2.jpg', '/images/about/book3.png', '/images/about/book4.png',  ],
   },
   {
     id: "crafting",
     title: "Crafting",
     description:
-      "I enjoy drawing, pottery, knitting, and making things with my hands.",
-    photos: [null, null, null],
+      "I enjoy making things with my hands like pottery and jewelry.",
+    photos: ['/images/about/crafts1.png', '/images/about/crafts2.png', '/images/about/crafts3.png','/images/about/crafts4.png', '/images/about/crafts5.png', '/images/about/crafts6.png', ],
   },
   {
     id: "cooking",
@@ -50,8 +51,10 @@ const interests: AboutInterest[] = [
 
 export default function AboutGallery() {
   const [activePhotos, setActivePhotos] = useState<Record<string, number>>({});
+  const [slideDirections, setSlideDirections] = useState<Record<string, -1 | 1>>({});
 
   const changePhoto = (id: string, count: number, direction: -1 | 1) => {
+    setSlideDirections((current) => ({ ...current, [id]: direction }));
     setActivePhotos((current) => ({
       ...current,
       [id]: ((current[id] ?? 0) + direction + count) % count,
@@ -77,18 +80,28 @@ export default function AboutGallery() {
           {interests.map((interest) => {
             const activeIndex = activePhotos[interest.id] ?? 0;
             const photo = interest.photos[activeIndex];
+            const slideClass =
+              slideDirections[interest.id] === undefined
+                ? ""
+                : slideDirections[interest.id] === 1
+                  ? " about-gallery-slide-next"
+                  : " about-gallery-slide-previous";
 
             return (
               <article className="about-gallery-card" key={interest.id}>
                 <div className="about-gallery-frame">
                   {photo ? (
                     <img
-                      className="about-gallery-image"
+                      key={activeIndex}
+                      className={`about-gallery-image${slideClass}`}
                       src={photo}
                       alt={`${interest.title}, photo ${activeIndex + 1}`}
                     />
                   ) : (
-                    <div className="about-gallery-placeholder">
+                    <div
+                      key={activeIndex}
+                      className={`about-gallery-placeholder${slideClass}`}
+                    >
                       <svg
                         viewBox="0 0 48 48"
                         aria-hidden="true"

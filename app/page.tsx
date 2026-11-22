@@ -477,13 +477,13 @@ function ContactSection() {
 const mastersEducationEntry = `<div class="panel panel-default">
   <div class="panel-heading" role="tab" id="headingMasters">
     <h4 class="panel-title">
-      <a class="collapsed" data-toggle="collapse" data-parent="#accordion"
-        href="#collapseMasters" aria-expanded="false" aria-controls="collapseMasters">
+      <a data-toggle="collapse" data-parent="#accordion"
+        href="#collapseMasters" aria-expanded="true" aria-controls="collapseMasters">
         Master’s in Digital Innovation · Human-Computer Interaction and Design
       </a>
     </h4>
   </div>
-  <div id="collapseMasters" class="panel-collapse collapse" role="tabpanel"
+  <div id="collapseMasters" class="panel-collapse collapse in" role="tabpanel"
     aria-labelledby="headingMasters">
     <div class="panel-body">
       <h4>EIT Digital Master School</h4>

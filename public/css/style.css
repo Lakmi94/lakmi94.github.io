@@ -136,6 +136,7 @@ figure figcaption {
 #colorlib-aside .position {
   display: block;
   margin-bottom: 2em;
+  margin-top: 2em;
   font-size: 14px;
   text-transform: uppercase;
 }

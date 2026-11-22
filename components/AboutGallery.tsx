@@ -15,7 +15,7 @@ const interests: AboutInterest[] = [
     id: "travel",
     title: "Traveling",
     description:
-      "A new city or culture is my favorite way to keep learning and to see things through a fresh lens.",
+      "I travel the way I like to read: slowly and with curiosity. I'd rather wander a city on foot, find a good café and get a little lost than follow a strict plan. From the Leaning Tower in Pisa to Jeju island, I come home with a camera roll full of photos and a few stories.",
     photos: ["/images/about/travel1.webp", "/images/about/travel2.webp", "/images/about/travel3.webp", "/images/about/travel4.webp", "/images/about/travel5.webp", "/images/about/travel6.webp", "/images/about/travel7.webp"
     ],
   },
@@ -23,20 +23,20 @@ const interests: AboutInterest[] = [
     id: "reading",
     title: "Reading",
     description:
-      "I enjoy getting lost in a good book and discovering new ideas and stories.",
+      "Stories are how I travel when I'm staying put. I mostly read romances and mysteries: I like a good love story, and I like a puzzle I can't put down.",
     photos: ['/images/about/book6.webp','/images/about/book1.webp', '/images/about/book2.webp', '/images/about/book3.webp', '/images/about/book4.webp',  ],
   },
   {
     id: "crafting",
     title: "Crafting",
     description:
-      "I enjoy making things with my hands like pottery and jewelry.",
+      "I've always loved making things with my hands. I also love collecting earrings, so making my own was a natural next step. I also enjoy making and painting pottery.",
     photos: ['/images/about/crafts1.webp', '/images/about/crafts2.webp', '/images/about/crafts3.webp','/images/about/crafts4.webp', '/images/about/crafts5.webp', '/images/about/crafts6.webp', ],
   },
   {
     id: "cooking",
     title: "Cooking & baking",
-    description: "I experiment with new recipes and enjoy time in the kitchen.",
+    description: "The kitchen is where I unwind. I like trying new recipes, baking things from scratch and decorating them, and I'm happiest when there's something in the oven.",
     photos: [
       "/images/about/cooking-cake-crown.jpg",
       "/images/about/cooking-fruit-cake.jpg",

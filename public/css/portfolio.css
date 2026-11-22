@@ -137,7 +137,7 @@ button {
 }
 
 #colorlib-aside .position {
-  margin: 0;
+  margin: 10px 0 0 0 ;
   color: var(--muted);
   font-size: 0.85rem;
   letter-spacing: 0.045em;
@@ -309,7 +309,7 @@ button {
 }
 
 #colorlib-hero .desc {
-  max-width: 760px;
+  max-width: 800px;
 }
 
 #colorlib-hero .desc h1 {
@@ -338,7 +338,7 @@ button {
 }
 
 #colorlib-hero .desc p {
-  max-width: 62ch;
+  max-width: 80ch;
   margin-bottom: 1.5rem;
   color: #39445b;
   font-size: 1.1rem;
@@ -1176,7 +1176,7 @@ button {
 
 .about-gallery-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.5rem;
   margin-top: 1.5rem;
 }

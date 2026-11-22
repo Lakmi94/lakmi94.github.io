@@ -257,7 +257,7 @@ button {
       rgb(255 255 255 / 58%) 66%,
       rgb(255 255 255 / 18%) 100%
     ),
-    url("/images/about/coverImage.jpeg");
+    url("/images/about/coverImage.webp");
   background-position: center, right bottom;
   background-repeat: no-repeat, no-repeat;
   background-size: cover, 52% auto;
@@ -1392,7 +1392,7 @@ button {
         rgb(255 255 255 / 78%) 58%,
         rgb(255 255 255 / 30%) 100%
       ),
-      url("/images/about/coverImage.jpeg");
+      url("/images/about/coverImage.webp");
     background-position: center, right bottom;
     background-size: cover, 64% auto;
   }
@@ -1519,7 +1519,7 @@ button {
         rgb(255 255 255 / 88%) 68%,
         rgb(255 255 255 / 62%) 100%
       ),
-      url("/images/about/coverImage.jpeg");
+      url("/images/about/coverImage.webp");
     background-position: center, right bottom;
     background-size: cover, 100% auto;
   }

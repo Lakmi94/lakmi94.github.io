@@ -16,7 +16,7 @@ const interests: AboutInterest[] = [
     title: "Traveling",
     description:
       "A new city or culture is my favorite way to keep learning and to see things through a fresh lens.",
-    photos: ["/images/about/travel1.png", "/images/about/travel2.png", "/images/about/travel3.png", "/images/about/travel4.png", "/images/about/travel5.jpg", "/images/about/travel6.png", "/images/about/travel7.jpg"
+    photos: ["/images/about/travel1.webp", "/images/about/travel2.webp", "/images/about/travel3.webp", "/images/about/travel4.webp", "/images/about/travel5.webp", "/images/about/travel6.webp", "/images/about/travel7.webp"
     ],
   },
   {
@@ -24,14 +24,14 @@ const interests: AboutInterest[] = [
     title: "Reading",
     description:
       "I enjoy getting lost in a good book and discovering new ideas and stories.",
-    photos: ['/images/about/book6.jpg','/images/about/book1.jpg', '/images/about/book2.jpg', '/images/about/book3.png', '/images/about/book4.png',  ],
+    photos: ['/images/about/book6.webp','/images/about/book1.webp', '/images/about/book2.webp', '/images/about/book3.webp', '/images/about/book4.webp',  ],
   },
   {
     id: "crafting",
     title: "Crafting",
     description:
       "I enjoy making things with my hands like pottery and jewelry.",
-    photos: ['/images/about/crafts1.png', '/images/about/crafts2.png', '/images/about/crafts3.png','/images/about/crafts4.png', '/images/about/crafts5.png', '/images/about/crafts6.png', ],
+    photos: ['/images/about/crafts1.webp', '/images/about/crafts2.webp', '/images/about/crafts3.webp','/images/about/crafts4.webp', '/images/about/crafts5.webp', '/images/about/crafts6.webp', ],
   },
   {
     id: "cooking",
@@ -96,6 +96,8 @@ export default function AboutGallery() {
                       className={`about-gallery-image${slideClass}`}
                       src={photo}
                       alt={`${interest.title}, photo ${activeIndex + 1}`}
+                      loading="lazy"
+                      decoding="async"
                     />
                   ) : (
                     <div

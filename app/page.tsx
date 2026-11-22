@@ -14,16 +14,16 @@ const imageDescriptions: Record<string, string> = {
   "images/logo (1).png": "EVS XTAccess",
   "images/ipdirector.PNG": "EVS IPDirector",
   "images/ingestfunnel.PNG": "EVS Ingest Funnel",
-  "/images/mobileStaking.png": "Tokamak Staking mobile app screens",
-  "/images/TonStarter.png": "TONStarter branding",
-  "/images/TokamakSwap.png": "Tokamak Swap interface",
-  "/images/Arqivea.png": "Arqivea museum discovery interface",
+  "/images/mobileStaking.webp": "Tokamak Staking mobile app screens",
+  "/images/TonStarter.webp": "TONStarter branding",
+  "/images/TokamakSwap.webp": "Tokamak Swap interface",
+  "/images/Arqivea.webp": "Arqivea museum discovery interface",
   "/images/EasyGo.png": "EasyGo accessible transit app",
-  "/images/Destino.png": "Destino travel application",
-  "/images/magickittens.jpg": "Magic Kittens game",
+  "/images/Destino.webp": "Destino travel application",
+  "/images/magickittens.webp": "Magic Kittens game",
   "/images/Acta.jpg": "Acta travel journal app",
-  "images/btp.PNG": "Olympic Broadcasting Services Broadcast Training Programme certificate",
-  "images/udemycertificate.jpg": "Udemy full-stack web development certificate",
+  "/images/btp.webp": "Olympic Broadcasting Services Broadcast Training Programme certificate",
+  "/images/udemycertificate.webp": "Udemy full-stack web development certificate",
 };
 
 const skillGroups = [
@@ -507,7 +507,7 @@ const mastersEducationEntry = `<div class="panel panel-default">
 
 const resumeProjects = `<div class="col-md-4 col-sm-6">
   <div class="blog-entry resume-project-card">
-    <div class="resume-project-cover"><img class="resume-project-image" src="/images/mobileStaking.png" alt="Tokamak Staking mobile app screens" /></div>
+    <div class="resume-project-cover"><img class="resume-project-image" src="/images/mobileStaking.webp" alt="Tokamak Staking mobile app screens" /></div>
     <div class="desc">
       <span><small>Mobile · Decentralized App</small></span>
       <h3>Tokamak Staking Mobile App</h3>
@@ -518,7 +518,7 @@ const resumeProjects = `<div class="col-md-4 col-sm-6">
 </div>
 <div class="col-md-4 col-sm-6">
   <div class="blog-entry resume-project-card">
-    <div class="resume-project-cover"><img class="resume-project-image" src="/images/TonStarter.png" alt="TONStarter branding" /></div>
+    <div class="resume-project-cover"><img class="resume-project-image" src="/images/TonStarter.webp" alt="TONStarter branding" /></div>
     <div class="desc">
       <span><small>Web3 · Decentralized Launchpad</small></span>
       <h3>TONStarter</h3>
@@ -532,7 +532,7 @@ const resumeProjects = `<div class="col-md-4 col-sm-6">
 </div>
 <div class="col-md-4 col-sm-6">
   <div class="blog-entry resume-project-card">
-    <div class="resume-project-cover"><img class="resume-project-image" src="/images/TokamakSwap.png" alt="Tokamak Swap interface" /></div>
+    <div class="resume-project-cover"><img class="resume-project-image" src="/images/TokamakSwap.webp" alt="Tokamak Swap interface" /></div>
     <div class="desc">
       <span><small>Web3 · Token Exchange</small></span>
       <h3>Tokamak Swap V2</h3>
@@ -546,7 +546,7 @@ const resumeProjects = `<div class="col-md-4 col-sm-6">
 </div>
 <div class="col-md-4 col-sm-6">
   <div class="blog-entry resume-project-card">
-    <div class="resume-project-cover"><img class="resume-project-image" src="/images/Arqivea.png" alt="Arqivea museum discovery interface" /></div>
+    <div class="resume-project-cover"><img class="resume-project-image" src="/images/Arqivea.webp" alt="Arqivea museum discovery interface" /></div>
     <div class="desc">
       <span><small>HCI · Museum Itinerary</small></span>
       <h3>Arqivea</h3>
@@ -571,7 +571,7 @@ const resumeProjects = `<div class="col-md-4 col-sm-6">
 </div>
 <div class="col-md-4 col-sm-6">
   <div class="blog-entry resume-project-card">
-    <div class="resume-project-cover"><img class="resume-project-image" src="/images/Destino.png" alt="Destino travel application" /></div>
+    <div class="resume-project-cover"><img class="resume-project-image" src="/images/Destino.webp" alt="Destino travel application" /></div>
     <div class="desc">
       <span><small>Software Engineering · Travel App</small></span>
       <h3>Destino</h3>
@@ -582,7 +582,7 @@ const resumeProjects = `<div class="col-md-4 col-sm-6">
 </div>
 <div class="col-md-4 col-sm-6">
   <div class="blog-entry resume-project-card">
-    <div class="resume-project-cover"><img class="resume-project-image" src="/images/magickittens.jpg" alt="Magic Kittens game" /></div>
+    <div class="resume-project-cover"><img class="resume-project-image" src="/images/magickittens.webp" alt="Magic Kittens game" /></div>
     <div class="desc">
       <span><small>Game Design · Web Game</small></span>
       <h3>Magic Kittens</h3>
@@ -728,7 +728,11 @@ export default function Home() {
   );
   const withProjects = withEducation.replace(projectGrid, `${projectGrid}${resumeProjects}`);
   const withAboutNav = withProjects.replace(contactNavItem, `${aboutNavItem}${contactNavItem}`);
-  const markup = withAboutNav.replace(aboutSectionAnchor, `${aboutSection}${aboutSectionAnchor}`);
+  const markup = withAboutNav
+    .replace(aboutSectionAnchor, `${aboutSection}${aboutSectionAnchor}`)
+    .replaceAll("images/lakmi1.jpg", "/images/lakmi1.webp")
+    .replaceAll("images/btp.PNG", "/images/btp.webp")
+    .replaceAll("images/udemycertificate.jpg", "/images/udemycertificate.webp");
 
   if (
     withEducation === portfolioMarkup ||
